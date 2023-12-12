@@ -24,12 +24,9 @@ public class Square {
         return true;
     }
     public boolean puntoDentroQuadrato(Point punto){
-        if(this.punto.getX()< punto.getX() && this.punto.getY()<punto.getY() && this.punto.getX()+lato>= punto.getX() && this.punto.getY()+lato>= punto.getY()){
-            return true;
-        }
-        else{
-            return false;
-        }
+        if (this.punto.getX() < punto.getX()) if (this.punto.getY() < punto.getY())
+            if ((this.punto.getX() + lato) >= punto.getX()) if ((this.punto.getY() + lato) >= punto.getY()) return true;
+        return false;
     }
 
 

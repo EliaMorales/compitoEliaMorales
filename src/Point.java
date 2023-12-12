@@ -3,8 +3,8 @@ public class Point {
     private int y;
 
     public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.x = Math.max(0, Math.min(x, 1000));
+        this.y = Math.max(0, Math.min(y, 1000));
     }
     public Point() {
         x = 0;
@@ -28,14 +28,14 @@ public class Point {
     }
 
     public boolean spostaVerticale(int offset){
-        y=y+offset;
+        y=Math.max(0, Math.min(y + offset, 1000));
         return true;
     }
 
 
 
     public boolean spostaOrizzontale(int offset){
-        x=x+offset;
+        x=Math.max(0, Math.min(x + offset, 1000));
         return true;
 }
 
